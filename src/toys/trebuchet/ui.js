@@ -58,7 +58,11 @@ export function marginText(metric, band, system) {
   if (band.value === null) return 'Not computable for this geometry.';
   const f = (v) => fmtMetric(metric, v, system);
   const { value, caution, danger } = band;
-  if (band.level === 'safe') return `${f(caution - value)} under the caution edge (${f(caution)})`;
+  if (band.level === 'safe') {
+    // Float noise can leave a hair of margin that would print as "0.000"; say it in words instead.
+    if (caution - value < 0.0005) return `right at the caution edge (${f(caution)})`;
+    return `${f(caution - value)} under the caution edge (${f(caution)})`;
+  }
   if (band.level === 'caution') return `${f(value - caution)} over the caution edge (${f(caution)}), ${f(danger - value)} under danger (${f(danger)})`;
   return `${f(value - danger)} over the danger edge (${f(danger)})`;
 }

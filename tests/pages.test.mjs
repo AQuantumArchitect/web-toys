@@ -14,3 +14,17 @@ test('every toy has an entry HTML page and well-formed fields', () => {
     assert.ok(existsSync(new URL(`../${p.slug}/index.html`, import.meta.url)));
   }
 });
+
+test('every toy has a screenshot, an OG image and meta descriptions', async () => {
+  const { readFileSync } = await import('node:fs');
+  const root = (p) => new URL(`../${p}`, import.meta.url);
+  assert.ok(existsSync(root('public/og.png')));
+  for (const p of pages) {
+    assert.ok(existsSync(root(`public${p.shot}`)), `${p.slug} screenshot`);
+    assert.ok(existsSync(root(`public/og-${p.slug}.png`)), `${p.slug} OG image`);
+    const html = readFileSync(root(`${p.slug}/index.html`), 'utf8');
+    assert.match(html, /<meta name="description" content="[^"]{20,}[^."]\."/);
+    assert.doesNotMatch(html, /\.\./);
+    assert.match(html, new RegExp(`og-${p.slug}\\.png`));
+  }
+});

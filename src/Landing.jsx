@@ -13,6 +13,13 @@ export default function Landing() {
                 href={p.path}
                 className="block h-full rounded-xl border border-stone-200 bg-white p-5 shadow-sm hover:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-500"
               >
+                <img
+                  src={p.shot}
+                  alt={`Screenshot of ${p.name}`}
+                  width="1000"
+                  height="625"
+                  className="mb-3 w-full h-auto rounded-lg border border-stone-200"
+                />
                 <h2 className="text-xl font-semibold">{p.name}</h2>
                 <p className="mt-1 text-sm text-stone-600">{p.pitch}</p>
               </a>
