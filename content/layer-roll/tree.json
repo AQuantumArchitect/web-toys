@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "rounds": ["outline", "fill", "details"],
+  "tags": {
+    "ocean": "Seas, shores, reefs and the deep: anything wet and salty.",
+    "space": "Planets, stars, rockets and the stuff between them.",
+    "forest": "Woods, meadows and gardens: green, leafy, outdoors.",
+    "sky": "Clouds, wind, flight and high places.",
+    "underground": "Caves, tunnels, mines, roots and buried things.",
+    "desert": "Sand, sun, dunes and dry heat.",
+    "frozen": "Snow, ice, cold mountains and winter.",
+    "magic": "Wizards, spells, potions and creatures that don't exist.",
+    "mechanical": "Gears, engines, robots, gadgets and anything built from parts.",
+    "spooky": "Kid-level creepy: ghosts, bats, cobwebs and moonlight, nothing gory.",
+    "silly": "Goofy, cartoonish, makes-you-giggle.",
+    "cozy": "Homes, snacks, blankets and gentle everyday things.",
+    "food": "Things you could eat or cook.",
+    "ancient": "Old ruins, fossils, castles and long-ago things.",
+    "sparkly": "Unicorns, rainbows, glitter and pastel shine (so a player can switch it off)."
+  },
+  "children": [
+    {
+      "id": "creatures",
+      "label": "Creatures",
+      "children": [
+        {
+          "id": "land-animals",
+          "label": "Land animals",
+          "tags": ["forest"],
+          "words": ["fox", "badger", "moose", "hedgehog", "tortoise"]
+        },
+        {
+          "id": "winged-things",
+          "label": "Winged things",
+          "tags": ["sky"],
+          "words": ["owl", "heron", "dragonfly", { "word": "bat", "tags": ["spooky"] }, "parrot"]
+        },
+        {
+          "id": "water-creatures",
+          "label": "Water creatures",
+          "tags": ["ocean"],
+          "words": ["octopus", "crab", "seahorse", "whale", "jellyfish"]
+        },
+        {
+          "id": "bugs-and-crawlers",
+          "label": "Bugs and crawlers",
+          "tags": ["forest", "underground"],
+          "words": ["beetle", "snail", "ladybug", "caterpillar", "ant"]
+        },
+        {
+          "id": "desert-and-snow-animals",
+          "label": "Desert and snow animals",
+          "words": [
+            { "word": "camel", "tags": ["desert"] },
+            { "word": "lizard", "tags": ["desert"] },
+            { "word": "penguin", "tags": ["frozen", "ocean"] },
+            { "word": "polar bear", "tags": ["frozen"] },
+            { "word": "snow hare", "tags": ["frozen"] }
+          ]
+        },
+        {
+          "id": "made-up-beasts",
+          "label": "Made-up beasts",
+          "tags": ["magic"],
+          "words": [
+            "dragon",
+            "griffin",
+            "sea serpent",
+            { "word": "unicorn", "tags": ["sparkly"] },
+            { "word": "friendly ghost", "tags": ["spooky"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "label": "People and characters",
+      "children": [
+        {
+          "id": "adventurers",
+          "label": "Adventurers",
+          "words": ["knight", "explorer", { "word": "pirate", "tags": ["ocean"] }, { "word": "astronaut", "tags": ["space"] }, "archer"]
+        },
+        {
+          "id": "workers-and-helpers",
+          "label": "Workers and helpers",
+          "tags": ["cozy"],
+          "words": ["baker", "farmer", "firefighter", "inventor", "gardener"]
+        },
+        {
+          "id": "magic-folk",
+          "label": "Magic folk",
+          "tags": ["magic"],
+          "words": ["wizard", "witch", "giant", "elf", { "word": "fairy", "tags": ["sparkly"] }]
+        },
+        {
+          "id": "royals-and-rulers",
+          "label": "Royals and rulers",
+          "tags": ["ancient"],
+          "words": ["queen", "king", "prince", "princess", "jester"]
+        }
+      ]
+    },
+    {
+      "id": "places",
+      "label": "Places",
+      "children": [
+        {
+          "id": "buildings",
+          "label": "Buildings",
+          "children": [
+            {
+              "id": "homes",
+              "label": "Homes",
+              "tags": ["cozy"],
+              "words": ["cottage", "treehouse", { "word": "igloo", "tags": ["frozen"] }, "houseboat", "tent"]
+            },
+            {
+              "id": "castles-and-towers",
+              "label": "Castles and towers",
+              "tags": ["ancient"],
+              "words": ["castle", "tower", "lighthouse", "windmill", "drawbridge"]
+            },
+            {
+              "id": "ruins-and-temples",
+              "label": "Ruins and temples",
+              "tags": ["ancient"],
+              "words": ["temple", "pyramid", "stone circle", "crumbling arch", "altar"]
+            }
+          ]
+        },
+        {
+          "id": "natural-places",
+          "label": "Natural places",
+          "children": [
+            {
+              "id": "high-ground",
+              "label": "Mountains and high ground",
+              "words": ["mountain", "volcano", "cliff", { "word": "floating island", "tags": ["sky", "magic"] }, "canyon"]
+            },
+            {
+              "id": "watery-places",
+              "label": "Watery places",
+              "tags": ["ocean"],
+              "words": ["waterfall", "lagoon", "coral reef", "island", "swamp"]
+            },
+            {
+              "id": "under-the-ground",
+              "label": "Under the ground",
+              "tags": ["underground"],
+              "words": ["cave", "tunnel", "mine", "burrow", "crystal cavern"]
+            }
+          ]
+        },
+        {
+          "id": "strange-places",
+          "label": "Strange places",
+          "tags": ["magic"],
+          "words": ["portal", "maze", { "word": "moon base", "tags": ["space", "mechanical"] }, { "word": "haunted house", "tags": ["spooky"] }, { "word": "rainbow bridge", "tags": ["sparkly"] }]
+        }
+      ]
+    },
+    {
+      "id": "things",
+      "label": "Things",
+      "children": [
+        {
+          "id": "tools-and-gear",
+          "label": "Tools and gear",
+          "words": ["sword", "shield", "lantern", "hammer", { "word": "magic staff", "tags": ["magic"] }]
+        },
+        {
+          "id": "vehicles",
+          "label": "Vehicles",
+          "children": [
+            {
+              "id": "land-vehicles",
+              "label": "On land",
+              "words": ["tractor", "steam train", "wagon", "go-kart", "skateboard"]
+            },
+            {
+              "id": "water-vehicles",
+              "label": "On water",
+              "tags": ["ocean"],
+              "words": ["sailing ship", "submarine", "rowboat", "raft", "paddle steamer"]
+            },
+            {
+              "id": "sky-and-space-vehicles",
+              "label": "In the sky and space",
+              "tags": ["sky"],
+              "words": ["hot-air balloon", "airship", "glider", { "word": "rocket", "tags": ["space"] }, { "word": "flying saucer", "tags": ["space"] }]
+            }
+          ]
+        },
+        {
+          "id": "machines",
+          "label": "Machines",
+          "tags": ["mechanical"],
+          "words": ["robot", "clockwork machine", "crane", "drill", { "word": "gumball machine", "tags": ["silly", "food"] }]
+        },
+        {
+          "id": "food-and-treats",
+          "label": "Food and treats",
+          "tags": ["food", "cozy"],
+          "words": ["cake", "pineapple", "teapot", { "word": "giant cupcake", "tags": ["silly"] }, "pie"]
+        },
+        {
+          "id": "toys-and-games",
+          "label": "Toys and games",
+          "tags": ["silly", "cozy"],
+          "words": ["kite", "spinning top", "jack-in-the-box", "teddy bear", "rubber duck"]
+        }
+      ]
+    },
+    {
+      "id": "plants",
+      "label": "Plants and growing things",
+      "tags": ["forest"],
+      "children": [
+        {
+          "id": "trees",
+          "label": "Trees",
+          "words": ["oak tree", "pine tree", { "word": "palm tree", "tags": ["desert", "ocean"] }, "willow", "bonsai"]
+        },
+        {
+          "id": "flowers-and-small-plants",
+          "label": "Flowers and small plants",
+          "words": ["sunflower", "cactus", "fern", "lily pad", "dandelion"]
+        },
+        {
+          "id": "fungi-and-oddities",
+          "label": "Fungi and odd growths",
+          "tags": ["underground"],
+          "words": ["giant mushroom", "toadstool", "glowing moss", { "word": "kelp", "tags": ["ocean"] }, "puffball"]
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "label": "Actions and moods",
+      "rounds": ["outline"],
+      "children": [
+        {
+          "id": "moving",
+          "label": "Moving",
+          "words": ["sprinting", "leaping", "tumbling", "sneaking", { "word": "flying", "tags": ["sky"] }, { "word": "swimming", "tags": ["ocean"] }]
+        },
+        {
+          "id": "doing",
+          "label": "Doing something",
+          "words": ["juggling", "building", "reading a map", { "word": "baking", "tags": ["food", "cozy"] }, "digging"]
+        },
+        {
+          "id": "resting",
+          "label": "Resting",
+          "tags": ["cozy"],
+          "words": ["sleeping", "yawning", "floating", "sitting very still", "curled up"]
+        },
+        {
+          "id": "moods",
+          "label": "Moods",
+          "words": ["grumpy", "proud", "shy", { "word": "giggling", "tags": ["silly"] }, "brave"]
+        }
+      ]
+    },
+    {
+      "id": "surfaces",
+      "label": "Surfaces and materials",
+      "rounds": ["fill", "details"],
+      "children": [
+        {
+          "id": "skins-and-coats",
+          "label": "Skins and coats",
+          "rounds": ["fill"],
+          "words": ["scales", "feathers", "fur", "shell plates", "spikes"]
+        },
+        {
+          "id": "metal",
+          "label": "Metal",
+          "tags": ["mechanical"],
+          "words": ["rivets", "copper plating", "chains", "pipes", "gears"]
+        },
+        {
+          "id": "stone-and-earth",
+          "label": "Stone and earth",
+          "words": ["cracks", "pebbles", { "word": "crystals", "tags": ["underground"] }, "mud", { "word": "fossils", "tags": ["ancient"] }]
+        },
+        {
+          "id": "wood-and-plants",
+          "label": "Wood and growing things",
+          "tags": ["forest"],
+          "words": ["bark", "moss", "ivy", "planks", "thorns"]
+        },
+        {
+          "id": "cloth-and-craft",
+          "label": "Cloth and craft",
+          "tags": ["cozy"],
+          "words": ["patchwork", "stitches", "knitting", "ribbons", "tassels"]
+        },
+        {
+          "id": "water-and-ice",
+          "label": "Water and ice",
+          "words": [{ "word": "icicles", "tags": ["frozen"] }, { "word": "frost", "tags": ["frozen"] }, "bubbles", "drips", { "word": "barnacles", "tags": ["ocean"] }]
+        },
+        {
+          "id": "patterns",
+          "label": "Patterns",
+          "words": ["stripes", "polka dots", "zigzags", "spirals", "checkerboard"]
+        }
+      ]
+    },
+    {
+      "id": "elements",
+      "label": "Weather and elements",
+      "rounds": ["fill"],
+      "words": [
+        { "word": "lightning", "tags": ["sky"] },
+        { "word": "snowstorm", "tags": ["frozen"] },
+        "fire",
+        { "word": "fog", "tags": ["spooky"] },
+        { "word": "rainbow", "tags": ["sparkly", "sky"] },
+        { "word": "sandstorm", "tags": ["desert"] }
+      ]
+    },
+    {
+      "id": "accents",
+      "label": "Small accents",
+      "rounds": ["details"],
+      "children": [
+        {
+          "id": "tiny-parts",
+          "label": "Tiny parts",
+          "words": ["buttons", "tiny windows", "bells", { "word": "little levers", "tags": ["mechanical"] }, "zippers"]
+        },
+        {
+          "id": "marks-and-symbols",
+          "label": "Marks and symbols",
+          "words": ["freckles", { "word": "runes", "tags": ["magic", "ancient"] }, "stars", "numbers", { "word": "glitter", "tags": ["sparkly"] }]
+        },
+        {
+          "id": "add-ons",
+          "label": "Add-ons",
+          "words": ["a tiny hat", "a bow tie", "a backpack", { "word": "a cobweb", "tags": ["spooky"] }, { "word": "a propeller", "tags": ["mechanical", "silly"] }]
+        },
+        {
+          "id": "odd-properties",
+          "label": "Odd properties",
+          "tags": ["magic"],
+          "words": ["glows in the dark", "hums when touched", "is see-through", "changes color", { "word": "smells like cookies", "tags": ["silly", "food"] }]
+        }
+      ]
+    }
+  ]
+}
