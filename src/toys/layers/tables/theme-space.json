@@ -1,0 +1,36 @@
+{
+  "name": "space",
+  "label": "Space",
+  "layers": [
+    {
+      "id": "outline",
+      "categories": {
+        "Space travelers": ["astronaut", "alien captain", "space explorer", "star pilot", "moon farmer", "comet rider", "robot astronomer", "cosmic traveler"],
+        "Space places and craft": ["space station", "moon base", "ringed planet", "starship", "satellite", "asteroid", "observatory dome", "wormhole gate"]
+      },
+      "modifier": {
+        "items": ["orbiting slowly", "drifting weightless", "blasting off", "waving from a window", "spinning in zero gravity", "chasing a comet", "beaming up", "landing gently"]
+      }
+    },
+    {
+      "id": "mid",
+      "categories": {
+        "Cosmic textures": ["craters", "star dust", "solar panels", "antennas", "metal hull plates", "meteor dents", "frozen gas swirls", "glowing rings"],
+        "Orbit patterns": ["orbit lines", "constellations", "moon phases", "planet stripes", "nebula clouds", "comet tails", "laser grids", "dome windows"]
+      },
+      "modifier": {
+        "items": ["near a bright star", "in a meteor shower", "beside a black hole", "on a distant moon", "inside a nebula", "in the dark of space", "under twin suns", "in an asteroid field"]
+      }
+    },
+    {
+      "id": "fine",
+      "categories": {
+        "Tiny tech": ["blinking switches", "a mission patch", "a mini antenna", "a small dial", "a screen", "a tiny thruster", "a radio dish", "a battery light"],
+        "Star specks": ["twinkly stars", "a tiny planet", "a small comet", "moon dust", "a baby satellite", "a glow ring", "stardust freckles", "a little rocket"]
+      },
+      "modifier": {
+        "items": ["beeps in code", "weighs nothing", "glows like a star", "speaks in whistles", "points to the north star", "is from another galaxy", "hums a space tune", "floats away if untied"]
+      }
+    }
+  ]
+}

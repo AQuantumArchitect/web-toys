@@ -1,0 +1,36 @@
+{
+  "name": "ocean",
+  "label": "Ocean",
+  "layers": [
+    {
+      "id": "outline",
+      "categories": {
+        "Deep sea dwellers": ["anglerfish", "narwhal", "manta ray", "sea dragon", "giant squid", "starfish", "walrus", "sea serpent"],
+        "Ocean places and craft": ["sunken ship", "coral castle", "diving bell", "underwater cave", "pirate raft", "sea stack", "kelp forest", "shipwreck lighthouse"]
+      },
+      "modifier": {
+        "items": ["swimming in circles", "blowing bubbles", "riding a current", "diving deep", "surfing a wave", "sinking slowly", "hiding in the kelp", "splashing about"]
+      }
+    },
+    {
+      "id": "mid",
+      "categories": {
+        "Sea textures": ["barnacles", "coral branches", "seaweed", "sea foam", "shell crusts", "tentacles", "fins", "pearl patches"],
+        "Tide patterns": ["ripples", "tide lines", "wave curls", "sand ripples", "net patterns", "scale rows", "current streaks", "sunlight beams"]
+      },
+      "modifier": {
+        "items": ["on the ocean floor", "in a tide pool", "during a big wave", "in a coral reef", "beneath a ship", "in a stormy sea", "beside a whirlpool", "at low tide"]
+      }
+    },
+    {
+      "id": "fine",
+      "categories": {
+        "Beach bits": ["a seashell", "a tiny anchor", "a pearl", "a sand dollar", "a fishing hook", "a message bottle", "a small compass", "a sea glass chip"],
+        "Little swimmers": ["tiny fish", "a hermit crab", "a minnow school", "a baby seahorse", "a clam", "a plankton cloud", "a tiny shrimp", "a sea snail"]
+      },
+      "modifier": {
+        "items": ["blows tiny bubbles", "glows like a jellyfish", "sings like a whale", "is always a bit damp", "points toward home", "tastes of salt", "ripples when it moves", "washes in and out"]
+      }
+    }
+  ]
+}

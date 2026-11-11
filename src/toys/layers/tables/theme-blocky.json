@@ -1,0 +1,36 @@
+{
+  "name": "blocky",
+  "label": "Blocky world",
+  "layers": [
+    {
+      "id": "outline",
+      "categories": {
+        "Cube critters": ["cube sheep", "square pig", "boxy cow", "blocky chicken", "cube wolf", "pixel cat", "square squid", "cube bee"],
+        "Cube monsters": ["creepy cube creeper", "grumpy block ghost", "stacked slime", "tall shadow cube", "pixel skeleton", "moss golem", "lava blob", "cave lurker"]
+      },
+      "modifier": {
+        "items": ["digging down", "stacking itself", "building a staircase", "mining for ore", "crafting something", "dropping blocks", "hopping in squares", "carrying a pickaxe"]
+      }
+    },
+    {
+      "id": "mid",
+      "categories": {
+        "Block materials": ["dirt blocks", "cobble blocks", "glass blocks", "wool blocks", "sand blocks", "clay blocks", "brick blocks", "gravel blocks"],
+        "Ores and veins": ["coal chunks", "iron veins", "gold nuggets", "gem ore", "copper veins", "stone seams", "glowing ore", "emerald-green ore"]
+      },
+      "modifier": {
+        "items": ["deep in a mine", "on a square hill", "next to a lava pool", "in a pixel forest", "on a block bridge", "in a cube village", "beside a mine cart track", "under a square moon"]
+      }
+    },
+    {
+      "id": "fine",
+      "categories": {
+        "Tools and torches": ["a tiny pickaxe", "a wall torch", "a little shovel", "a wooden axe", "a tool belt", "a lantern block", "a mini furnace", "a signpost"],
+        "Pixel bits": ["pixel hearts", "square eyes", "a pixel sparkle", "tiny cubes", "a block button", "a checker patch", "a pixel flower", "a square flag"]
+      },
+      "modifier": {
+        "items": ["breaks into tiny cubes", "drops a surprise item", "glows like a torch", "makes a plink sound", "is made of one block", "rebuilds itself overnight", "is secretly hollow", "blinks in squares"]
+      }
+    }
+  ]
+}

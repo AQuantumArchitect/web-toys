@@ -1,0 +1,60 @@
+{
+  "name": "base",
+  "layers": [
+    {
+      "id": "outline",
+      "label": "Outline",
+      "categories": {
+        "Land animals": ["fox", "bear", "hedgehog", "tortoise", "camel", "moose", "armadillo", "badger"],
+        "Winged things": ["owl", "dragonfly", "heron", "bat", "hawk", "moth", "pelican", "parrot"],
+        "Water creatures": ["octopus", "crab", "seahorse", "whale", "eel", "jellyfish", "frog", "turtle"],
+        "Folk and warriors": ["knight", "wizard", "pirate", "giant", "farmer", "ninja", "queen", "explorer"],
+        "Buildings and places": ["castle", "cave", "lighthouse", "windmill", "treehouse", "tower", "bridge", "temple"],
+        "Plants and trees": ["oak tree", "cactus", "giant mushroom", "sunflower", "vine", "pine tree", "lily pad", "bonsai"],
+        "Machines and vehicles": ["robot", "steam engine", "hot-air balloon", "submarine", "tractor", "clockwork machine", "sailing ship", "rocket cart"],
+        "Weapons and gear": ["sword", "shield", "crossbow", "magic staff", "hammer", "bow", "trident", "lantern"],
+        "Landforms and portals": ["mountain", "volcano", "island", "waterfall", "portal", "altar", "floating rock", "canyon"]
+      },
+      "modifier": {
+        "label": "Behavior",
+        "items": ["sprinting", "sleeping", "juggling", "sneaking", "dancing", "hiding", "singing", "stomping", "leaping", "waving hello", "balancing", "tumbling"]
+      }
+    },
+    {
+      "id": "mid",
+      "label": "Mid detail",
+      "categories": {
+        "Skin and coverings": ["scales", "feathers", "fur", "spikes", "shell plates", "bark", "fuzz", "leathery wrinkles"],
+        "Metal and hardware": ["rivets", "gears", "chains", "pipes", "bolts", "hinges", "springs", "copper plating"],
+        "Stone and earth": ["cracks", "boulders", "pebbles", "crystals", "sand drifts", "stripes of rock", "mud patches", "stalactites"],
+        "Plants and growth": ["moss", "ivy", "flowers", "mushrooms", "leaves", "roots", "thorns", "berry bushes"],
+        "Cloth and craft": ["patchwork", "stitches", "ribbons", "tassels", "knitted bits", "flags", "straps", "woven baskets"],
+        "Water and ice": ["icicles", "puddles", "bubbles", "frost", "drips", "foam", "waves", "snow caps"],
+        "Wood and building": ["planks", "ladders", "scaffolding", "barrels", "shingles", "crates", "beams", "balconies"],
+        "Shapes and patterns": ["polka dots", "zigzags", "spirals", "checkerboard", "stripes", "diamonds", "swirls", "stars"]
+      },
+      "modifier": {
+        "label": "Environment",
+        "items": ["under a waterfall", "in a thunderstorm", "on a tiny island", "in deep snow", "during a sunset", "floating in clouds", "inside a bubble", "in a windy meadow", "buried in sand", "on a mossy hill", "at the bottom of a lake", "in thick fog"]
+      }
+    },
+    {
+      "id": "fine",
+      "label": "Fine detail",
+      "categories": {
+        "Marks and symbols": ["runes", "tally marks", "tiny arrows", "a secret code", "a small crown", "a map symbol", "a spiral badge", "a tiny flag"],
+        "Small fasteners": ["buttons", "buckles", "tiny keys", "small locks", "safety pins", "zippers", "clasps", "bells"],
+        "Faces and features": ["freckles", "whiskers", "big eyelashes", "a monocle", "a tiny smile", "eyebrows", "dimples", "a mustache"],
+        "Tiny openings": ["tiny windows", "keyholes", "small doors", "porthole", "mouse holes", "chimney puffs", "peepholes", "tiny hatches"],
+        "Small critters": ["a ladybug", "a snail", "a tiny spider", "a firefly", "a small bird", "an ant parade", "a baby frog", "a butterfly"],
+        "Light and sparks": ["glowing dots", "little sparks", "tiny lanterns", "star specks", "candle flames", "glitter", "twinkles", "a small halo"],
+        "Jewelry and trinkets": ["a ring", "a pendant", "tiny medals", "beads", "a feather charm", "an earring", "a pocket watch", "a ribbon bow"],
+        "Food and snacks": ["breadcrumbs", "a cherry", "an acorn", "cookie crumbs", "a tiny pie", "a pea pod", "a lemon slice", "honey drips"]
+      },
+      "modifier": {
+        "label": "Odd property",
+        "items": ["hums when touched", "glows in the dark", "is slightly too big", "leaves a trail of sparkles", "is always upside down", "giggles at night", "can talk to birds", "changes color when happy", "is very ticklish", "smells like cinnamon", "is a bit invisible", "floats an inch off the ground"]
+      }
+    }
+  ]
+}
