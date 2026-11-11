@@ -199,6 +199,9 @@ function App() {
             {copied ? '✓ Copied' : '📋 Copy'}
           </button>
         </div>
+        <p className="text-sm text-stone-600">
+          Copy saves the rolls as shown. The page link replays only the <b>starting roll</b>; re-rolls and locks aren't saved in it.
+        </p>
 
         <section className="rounded-2xl bg-white border-2 border-stone-200 p-4">
           <h2 className="text-xl font-bold">How to play</h2>

@@ -64,7 +64,7 @@ export default function Diagram({ r, system }) {
       {/* frame */}
       <path d={`M${X(-leg)},${Y(0)} L${X(0)},${Y(H)} L${X(leg)},${Y(0)}`} fill="none" stroke="#78716c" strokeWidth={sw * 4} strokeLinejoin="round" />
       <line x1={X(0)} x2={X(0)} y1={Y(0)} y2={Y(H)} stroke="#a8a29e" strokeWidth={sw * 1.5} strokeDasharray={`${sw * 4} ${sw * 4}`} />
-      <text x={X(0) + 0.15} y={Y(H / 2)} fontSize={fs} fill="#57534e">fulcrum {fmt(H, 'length', system)}</text>
+      <text x={X(0) + 0.5} y={Y(H + 0.6)} fontSize={fs} fill="#57534e">fulcrum {fmt(H, 'length', system)}</text>
       {/* rider path */}
       <path d={path(arc)} fill="none" stroke="#a16207" strokeWidth={sw * 2} strokeDasharray={`${sw * 5} ${sw * 4}`} />
       {flight.length > 0 && <path d={path(flight)} fill="none" stroke="#a16207" strokeWidth={sw * 2} />}

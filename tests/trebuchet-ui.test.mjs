@@ -40,3 +40,9 @@ test('summary line has landing, spread, speed and g; imperial converts', () => {
   assert.equal(fmt(1, 'length', 'imperial'), '3.3 ft');
   assert.equal(fmt(NaN, 'length', 'metric'), 'N/A');
 });
+
+test('marginText says "right at" when the safe margin is float noise', () => {
+  const t = marginText('maxHeight', { value: 5 - 1e-9, level: 'safe', caution: 5, danger: 8 }, 'metric');
+  assert.match(t, /^right at the caution edge \(5\.0 m\)$/);
+  assert.doesNotMatch(t, /0\.000/);
+});
