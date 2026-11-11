@@ -64,7 +64,9 @@ export function computeLobber(params) {
 
   let ballistic = null;
   let maxHeight = swingBottom + heightGain;
-  let impactSpeed = Math.sqrt(2 * G * heightGain);
+  // Intentional departure from the 2025 reference: the pendulum lands at the apex, so the rider
+  // falls from maxHeight above the water, not heightGain above the swing bottom.
+  let impactSpeed = Math.sqrt(2 * G * Math.max(0, maxHeight));
   let landingDistance = radius * Math.sin(maxSwingAngle * RAD);
 
   if (p.enableRelease && p.releaseAngle > maxSwingAngle) {
@@ -77,8 +79,10 @@ export function computeLobber(params) {
 
     const ke = 0.5 * inertia * omegaMax ** 2 - p.projectileWeight * G * gain;
     const releaseSpeed = Math.sqrt(Math.max(0, (2 * ke) / inertia)) * radius;
-    const vx = releaseSpeed * Math.sin(a);
-    const vy = releaseSpeed * Math.cos(a);
+    // Intentional departure from the 2025 reference, which had these swapped: releaseAngle is measured
+    // from the downward vertical (as in `gain` above), so tangential velocity is cos(a) horizontal, sin(a) vertical.
+    const vx = releaseSpeed * Math.cos(a);
+    const vy = releaseSpeed * Math.sin(a);
     const vyImpact = Math.sqrt(vy ** 2 + 2 * G * Math.max(0, releaseHeight));
     const flightTime = (vy + vyImpact) / G;
     maxHeight = releaseHeight + vy ** 2 / (2 * G);
@@ -89,7 +93,8 @@ export function computeLobber(params) {
 
   const halfWidth = Math.max(0, maxHeight) * p.landingZoneMultiplier;
   const bands = {
-    peakG: classify('peakG', centripetalG),
+    // Intentional departure from the reference: band the felt G (centripetal + 1 g), what a rider feels.
+    peakG: classify('peakG', feltG),
     maxHeight: classify('maxHeight', maxHeight),
     impactSpeed: classify('impactSpeed', impactSpeed),
   };

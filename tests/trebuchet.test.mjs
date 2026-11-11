@@ -15,14 +15,34 @@ test('defaults match the spec', () => {
 test('rider energy is the counterweight PE times the efficiency factor', () => {
   const r = computeLobber(DEFAULT_PARAMS);
   near(r.energy.usable, r.energy.potential * EFFICIENCY);
-  near(0.5 * DEFAULT_PARAMS.projectileWeight * r.impactSpeed ** 2, r.energy.usable);
+  near(0.5 * DEFAULT_PARAMS.projectileWeight * r.impactSpeed ** 2, DEFAULT_PARAMS.projectileWeight * G * r.maxHeight);
   assert.ok(r.energy.usable <= r.energy.potential);
 });
 
-test('pendulum impact speed is sqrt(2gh) for the computed height', () => {
+test('pendulum impact speed is sqrt(2g*maxHeight)', () => {
   const r = computeLobber(DEFAULT_PARAMS);
-  const h = r.maxHeight - r.geometry.swingBottomHeight;
-  near(r.impactSpeed, Math.sqrt(2 * G * h));
+  near(r.impactSpeed, Math.sqrt(2 * G * r.maxHeight));
+});
+
+test('peakG is banded on the felt G', () => {
+  const r = computeLobber(DEFAULT_PARAMS);
+  assert.equal(r.bands.peakG.value, r.peakGFelt);
+  near(r.peakGFelt, r.peakG + 1);
+});
+
+test('ballistic release: flat release has ~zero vertical speed, 45 deg has vx = vy', () => {
+  const flat = computeLobber({ ...DEFAULT_PARAMS, enableRelease: true, releaseAngle: 0 });
+  const b = flat.ballistic;
+  const h = flat.geometry.swingBottomHeight;
+  near(b.range, b.releaseSpeed * Math.sqrt((2 * h) / G), 1e-6);
+  // 45 deg: velocity components equal, so apex rise = v^2/4g
+  const r45 = computeLobber({ ...DEFAULT_PARAMS, counterWeight: 1000, enableRelease: true, releaseAngle: 45 });
+  assert.ok(r45.ballistic, "45 deg release should be reachable");
+  {
+    const v = r45.ballistic.releaseSpeed;
+    const gain = r45.geometry.radius * (1 - Math.cos(Math.PI / 4));
+    near(r45.maxHeight, r45.geometry.swingBottomHeight + gain + (v * v) / 2 / (2 * G), 1e-9);
+  }
 });
 
 test('band edges: just under is lower band, edge is higher band', () => {
