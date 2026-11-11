@@ -6,7 +6,7 @@
       "id": "outline",
       "categories": {
         "Cube critters": ["cube sheep", "square pig", "boxy cow", "blocky chicken", "cube wolf", "pixel cat", "square squid", "cube bee"],
-        "Cube monsters": ["creepy cube creeper", "grumpy block ghost", "stacked slime", "tall shadow cube", "pixel skeleton", "moss golem", "lava blob", "cave lurker"]
+        "Cube monsters": ["sneaky cube critter", "grumpy block ghost", "stacked slime", "tall shadow cube", "pixel skeleton", "moss golem", "lava blob", "cave lurker"]
       },
       "modifier": {
         "items": ["digging down", "stacking itself", "building a staircase", "mining for ore", "crafting something", "dropping blocks", "hopping in squares", "carrying a pickaxe"]

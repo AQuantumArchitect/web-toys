@@ -105,7 +105,7 @@ test('no duplicate items inside a layer', () => {
 
 test('kid-safety deny-list', () => {
   const deny = ['blood', 'gore', 'kill', 'dead', 'death', 'die', 'gun', 'bomb', 'drug', 'beer', 'wine', 'sexy', 'nude',
-    'naked', 'skull', 'murder', 'suicide', 'unicorn', 'rainbow', 'minecraft', 'enderman', 'zombie', 'steve',
+    'naked', 'skull', 'murder', 'suicide', 'unicorn', 'rainbow', 'minecraft', 'enderman', 'creeper', 'zombie', 'steve',
     'fantasy genesis'];
   const re = new RegExp(`\\b(${deny.join('|')})`, 'i');
   for (const [name, t] of allTables) {
